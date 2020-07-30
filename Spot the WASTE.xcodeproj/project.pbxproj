@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4DBA3F24D298B7002E7CDD /* WasteImageClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E4DBA3E24D298B7002E7CDD /* WasteImageClassifier 1.mlmodel */; };
 		1EBCAD7724D1B4C900F83F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCAD7624D1B4C900F83F2E /* AppDelegate.swift */; };
 		1EBCAD7924D1B4C900F83F2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCAD7824D1B4C900F83F2E /* SceneDelegate.swift */; };
 		1EBCAD7B24D1B4C900F83F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCAD7A24D1B4C900F83F2E /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E4DBA3E24D298B7002E7CDD /* WasteImageClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "WasteImageClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		1EBCAD7324D1B4C900F83F2E /* Spot the WASTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spot the WASTE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EBCAD7624D1B4C900F83F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EBCAD7824D1B4C900F83F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,7 @@
 		1EBCAD7F24D1B4CD00F83F2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EBCAD8224D1B4CD00F83F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EBCAD8424D1B4CD00F83F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EBCAD8C24D1CD3800F83F2E /* Spot the WASTE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spot the WASTE.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		1EBCAD7524D1B4C900F83F2E /* Spot the WASTE */ = {
 			isa = PBXGroup;
 			children = (
+				1EBCAD8C24D1CD3800F83F2E /* Spot the WASTE.entitlements */,
 				1EBCAD7624D1B4C900F83F2E /* AppDelegate.swift */,
 				1EBCAD7824D1B4C900F83F2E /* SceneDelegate.swift */,
 				1EBCAD7A24D1B4C900F83F2E /* ViewController.swift */,
@@ -63,6 +67,7 @@
 				1EBCAD7F24D1B4CD00F83F2E /* Assets.xcassets */,
 				1EBCAD8124D1B4CD00F83F2E /* LaunchScreen.storyboard */,
 				1EBCAD8424D1B4CD00F83F2E /* Info.plist */,
+				1E4DBA3E24D298B7002E7CDD /* WasteImageClassifier 1.mlmodel */,
 			);
 			path = "Spot the WASTE";
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				1EBCAD7B24D1B4C900F83F2E /* ViewController.swift in Sources */,
 				1EBCAD7724D1B4C900F83F2E /* AppDelegate.swift in Sources */,
 				1EBCAD7924D1B4C900F83F2E /* SceneDelegate.swift in Sources */,
+				1E4DBA3F24D298B7002E7CDD /* WasteImageClassifier 1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Spot the WASTE/Spot the WASTE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MV782KQLG2;
 				INFOPLIST_FILE = "Spot the WASTE/Info.plist";
@@ -293,6 +300,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Captain-Anubhv.Spot-the-WASTE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Spot the WASTE/Spot the WASTE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MV782KQLG2;
 				INFOPLIST_FILE = "Spot the WASTE/Info.plist";
@@ -311,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Captain-Anubhv.Spot-the-WASTE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
