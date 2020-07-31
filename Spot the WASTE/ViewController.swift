@@ -9,7 +9,7 @@
 import UIKit
 import CoreML
 import Vision
-
+import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -40,6 +40,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.allowsEditing = true
         
         
+        
+      
                 
     }
     
@@ -104,6 +106,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.gifImg.image = UIImage(imageLiteralResourceName: "org.png")
                     self.wastelabel.text = "It's a WET WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "grn.png")
+                    self.readMe(myText: "It's a WET WASTE")
                     
 //                    self.navigationItem.title = "Hotdog!"
                 }
@@ -112,6 +115,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.gifImg.image = UIImage(imageLiteralResourceName: "inorg.png")
                     self.wastelabel.text = "It's a DRY WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "blue.png")
+                    self.readMe(myText: "It's a DRY WASTE")
                 }
             }
             
@@ -144,5 +148,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true, completion: nil)
         
     }
+    
+    
+    func readMe(myText: String) {
+        let utterance = AVSpeechUtterance(string: myText)
+        utterance.voice = AVSpeechSynthesisVoice()
+        utterance.rate = 0.5
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+    }
+    
 }
 
