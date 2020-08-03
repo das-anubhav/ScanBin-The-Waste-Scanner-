@@ -13,7 +13,7 @@ import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
- 
+    
     @IBOutlet var bgv: UIImageView!
     @IBOutlet weak var wastelabel: UILabel!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var effect:UIVisualEffect!
     
     let imagePicker = UIImagePickerController()
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,42 +33,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         visualEffectView.effect = nil
         
         bgv.layer.cornerRadius = 10
-//        addItemView.layer.cornerRadius = 5
-//        addItemView.layer.cornerRadius = 50
+        //        addItemView.layer.cornerRadius = 5
+        //        addItemView.layer.cornerRadius = 50
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
         
         
         
-      
-                
+        
+        
     }
     
     func animateIn() {
         self.view.addSubview(addItemView)
         addItemView.center = self.view.center
-
+        
         addItemView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         addItemView.alpha = 0
-
+        
         UIView.animate(withDuration: 0.4) {
             self.visualEffectView.effect = self.effect
             self.addItemView.alpha = 1
             self.addItemView.transform = CGAffineTransform.identity
         }
-
+        
     }
-
+    
     func animateOut () {
         UIView.animate(withDuration: 0.3, animations: {
             self.addItemView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.addItemView.alpha = 0
             self.visualEffectView.effect = nil
-
-
+            
+            
         }) { (success:Bool) in
-                self.addItemView.removeFromSuperview()
+            self.addItemView.removeFromSuperview()
         }
     }
     
@@ -103,19 +103,47 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             if let firstResult = results.first {
                 if firstResult.identifier.contains("O"){
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "org.png")
-                    self.wastelabel.text = "It's a WET WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "grn.png")
-                    self.readMe(myText: "It's a WET WASTE")
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "O.png")
+                    self.wastelabel.text = "It's a Organic WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "OR.png")
+                    self.readMe(myText: "It's a Organic WASTE")
                     
-//                    self.navigationItem.title = "Hotdog!"
                 }
-                else {
-//                    self.navigationItem.title = "Not a Hotdog!"
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "inorg.png")
-                    self.wastelabel.text = "It's a DRY WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "blue.png")
-                    self.readMe(myText: "It's a DRY WASTE")
+                if firstResult.identifier.contains("PL") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "PL.jpg")
+                    self.wastelabel.text = "It's a Plastic WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "BLACK.png")
+                    self.readMe(myText: "It's a Plastic WASTE")
+                }
+                if firstResult.identifier.contains("E") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "E.jpg")
+                    self.wastelabel.text = "It's a E-WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "RE.png")
+                    self.readMe(myText: "It's a E-WASTE")
+                }
+                if firstResult.identifier.contains("M") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "M.jpg")
+                    self.wastelabel.text = "It's a Metal WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "OR.png")
+                    self.readMe(myText: "It's a Metal WASTE")
+                }
+                if firstResult.identifier.contains("P") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "P.jpg")
+                    self.wastelabel.text = "It's a Paper WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "BL.png")
+                    self.readMe(myText: "It's a Paper WASTE")
+                }
+                if firstResult.identifier.contains("G") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "G.jpg")
+                    self.wastelabel.text = "It's a Glass WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "GR.png")
+                    self.readMe(myText: "It's a Glass WASTE")
+                }
+                if firstResult.identifier.contains("H") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "X.png")
+                    self.wastelabel.text = "It's not a WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "BR.png")
+                    self.readMe(myText: "It's not a WASTE")
                 }
             }
             
