@@ -33,8 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         visualEffectView.effect = nil
         
         bgv.layer.cornerRadius = 10
-        //        addItemView.layer.cornerRadius = 5
-        //        addItemView.layer.cornerRadius = 50
+        addItemView.layer.cornerRadius = 10
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
@@ -92,7 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func detect(image: CIImage) {
         
-        guard let model = try? VNCoreMLModel(for: WasteImageClassifier_1().model) else {
+        guard let model = try? VNCoreMLModel(for: ALLWaste_1().model) else {
             fatalError("Loading CoreMl model failed")
         }
         
@@ -103,38 +102,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             if let firstResult = results.first {
                 if firstResult.identifier.contains("O"){
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "O.png")
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "O1.png")
                     self.wastelabel.text = "It's a Organic WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "OR.png")
+                    self.bgv.image = UIImage(imageLiteralResourceName: "YE.png")
                     self.readMe(myText: "It's a Organic WASTE")
                     
                 }
-                if firstResult.identifier.contains("PL") {
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "PL.jpg")
-                    self.wastelabel.text = "It's a Plastic WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "BLACK.png")
-                    self.readMe(myText: "It's a Plastic WASTE")
-                }
                 if firstResult.identifier.contains("E") {
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "E.jpg")
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "E1.png")
                     self.wastelabel.text = "It's a E-WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "RE.png")
                     self.readMe(myText: "It's a E-WASTE")
                 }
                 if firstResult.identifier.contains("M") {
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "M.jpg")
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "M1.png")
                     self.wastelabel.text = "It's a Metal WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "OR.png")
                     self.readMe(myText: "It's a Metal WASTE")
                 }
                 if firstResult.identifier.contains("P") {
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "P.jpg")
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "P1.png")
                     self.wastelabel.text = "It's a Paper WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "BL.png")
                     self.readMe(myText: "It's a Paper WASTE")
                 }
                 if firstResult.identifier.contains("G") {
-                    self.gifImg.image = UIImage(imageLiteralResourceName: "G.jpg")
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "G1.png")
                     self.wastelabel.text = "It's a Glass WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "GR.png")
                     self.readMe(myText: "It's a Glass WASTE")
@@ -144,6 +137,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.wastelabel.text = "It's not a WASTE"
                     self.bgv.image = UIImage(imageLiteralResourceName: "BR.png")
                     self.readMe(myText: "It's not a WASTE")
+                }
+                if firstResult.identifier.contains("PL") {
+                    self.gifImg.image = UIImage(imageLiteralResourceName: "PL1.png")
+                    self.wastelabel.text = "It's a Plastic WASTE"
+                    self.bgv.image = UIImage(imageLiteralResourceName: "BLACK.png")
+                    self.readMe(myText: "It's a Plastic WASTE")
                 }
             }
             
