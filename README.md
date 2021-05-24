@@ -7,4 +7,3 @@ UIKit,
 CoreML,
 Vision,
 AVFoundation
-[chartreuse-dark_repo]: https://github-readme-stats.vercel.app/api/pin/?username=Interstellar2Anubhav&repo=github-readme-stats&cache_seconds=86400&theme=chartreuse-dark
