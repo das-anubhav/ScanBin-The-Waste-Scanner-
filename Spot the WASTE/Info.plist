@@ -25,9 +25,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need your camera</string>
+	<string>Allow access to Camera to Scan the objects.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need your Photo Library</string>
+	<string>Allow access to photos to upload photos from your library.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
