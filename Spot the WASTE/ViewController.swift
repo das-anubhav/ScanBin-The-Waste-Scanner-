@@ -14,7 +14,7 @@ import AVFoundation
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    @IBOutlet var bgv: UIImageView!
+//    @IBOutlet var bgv: UIImageView!
     @IBOutlet weak var wastelabel: UILabel!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet weak var gifImg: UIImageView!
@@ -32,7 +32,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         effect = visualEffectView.effect
         visualEffectView.effect = nil
         
-        bgv.layer.cornerRadius = 10
+//        bgv.layer.cornerRadius = 10
+//        bgv.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+//        bgv.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
         addItemView.layer.cornerRadius = 10
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -103,45 +105,45 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let firstResult = results.first {
                 if firstResult.identifier.contains("O"){
                     self.gifImg.image = UIImage(imageLiteralResourceName: "O1.png")
-                    self.wastelabel.text = "It's a Organic WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "YE.png")
-                    self.readMe(myText: "It's a Organic WASTE")
+                    self.wastelabel.text = "It's an Organic WASTE"
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "YE.png")
+                    self.readMe(myText: "It's an Organic WASTE")
                     
                 }
                 if firstResult.identifier.contains("E") {
                     self.gifImg.image = UIImage(imageLiteralResourceName: "E1.png")
-                    self.wastelabel.text = "It's a E-WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "RE.png")
-                    self.readMe(myText: "It's a E-WASTE")
+                    self.wastelabel.text = "It's an E-WASTE"
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "RE.png")
+                    self.readMe(myText: "It's an E-WASTE")
                 }
                 if firstResult.identifier.contains("M") {
                     self.gifImg.image = UIImage(imageLiteralResourceName: "M1.png")
                     self.wastelabel.text = "It's a Metal WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "OR.png")
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "OR.png")
                     self.readMe(myText: "It's a Metal WASTE")
                 }
                 if firstResult.identifier.contains("P") {
                     self.gifImg.image = UIImage(imageLiteralResourceName: "P1.png")
                     self.wastelabel.text = "It's a Paper WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "BL.png")
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "BL.png")
                     self.readMe(myText: "It's a Paper WASTE")
                 }
                 if firstResult.identifier.contains("G") {
                     self.gifImg.image = UIImage(imageLiteralResourceName: "G1.png")
                     self.wastelabel.text = "It's a Glass WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "GR.png")
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "GR.png")
                     self.readMe(myText: "It's a Glass WASTE")
                 }
                 if firstResult.identifier.contains("H") {
                     self.gifImg.image = UIImage(imageLiteralResourceName: "X.png")
                     self.wastelabel.text = "It's not a WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "BR.png")
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "BR.png")
                     self.readMe(myText: "It's not a WASTE")
                 }
                 if firstResult.identifier.contains("PL") {
                     self.gifImg.image = UIImage(imageLiteralResourceName: "PL1.png")
                     self.wastelabel.text = "It's a Plastic WASTE"
-                    self.bgv.image = UIImage(imageLiteralResourceName: "BLACK.png")
+//                    self.bgv.image = UIImage(imageLiteralResourceName: "BLACK.png")
                     self.readMe(myText: "It's a Plastic WASTE")
                 }
             }
