@@ -62,7 +62,7 @@
 		1E4EE96724D864B5007FE882 /* E1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = E1.png; sourceTree = "<group>"; };
 		1E4EE96824D864B5007FE882 /* G1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = G1.png; sourceTree = "<group>"; };
 		1E5B5FA226CA7B3D0064EACE /* prople.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prople.png; sourceTree = "<group>"; };
-		1EBCAD7324D1B4C900F83F2E /* Spot the WASTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spot the WASTE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBCAD7324D1B4C900F83F2E /* ScanBin - The Waste Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScanBin - The Waste Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EBCAD7624D1B4C900F83F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EBCAD7824D1B4C900F83F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1EBCAD7A24D1B4C900F83F2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		1EBCAD7424D1B4C900F83F2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EBCAD7324D1B4C900F83F2E /* Spot the WASTE.app */,
+				1EBCAD7324D1B4C900F83F2E /* ScanBin - The Waste Scanner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EBCAD7224D1B4C900F83F2E /* Spot the WASTE */ = {
+		1EBCAD7224D1B4C900F83F2E /* ScanBin - The Waste Scanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EBCAD8724D1B4CD00F83F2E /* Build configuration list for PBXNativeTarget "Spot the WASTE" */;
+			buildConfigurationList = 1EBCAD8724D1B4CD00F83F2E /* Build configuration list for PBXNativeTarget "ScanBin - The Waste Scanner" */;
 			buildPhases = (
 				1EBCAD6F24D1B4C900F83F2E /* Sources */,
 				1EBCAD7024D1B4C900F83F2E /* Frameworks */,
@@ -153,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = "Spot the WASTE";
+			name = "ScanBin - The Waste Scanner";
 			productName = "Spot the WASTE";
-			productReference = 1EBCAD7324D1B4C900F83F2E /* Spot the WASTE.app */;
+			productReference = 1EBCAD7324D1B4C900F83F2E /* ScanBin - The Waste Scanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1EBCAD6E24D1B4C900F83F2E /* Build configuration list for PBXProject "Spot the WASTE" */;
+			buildConfigurationList = 1EBCAD6E24D1B4C900F83F2E /* Build configuration list for PBXProject "ScanBin - The Waste Scanner" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -186,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EBCAD7224D1B4C900F83F2E /* Spot the WASTE */,
+				1EBCAD7224D1B4C900F83F2E /* ScanBin - The Waste Scanner */,
 			);
 		};
 /* End PBXProject section */
@@ -417,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EBCAD6E24D1B4C900F83F2E /* Build configuration list for PBXProject "Spot the WASTE" */ = {
+		1EBCAD6E24D1B4C900F83F2E /* Build configuration list for PBXProject "ScanBin - The Waste Scanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EBCAD8524D1B4CD00F83F2E /* Debug */,
@@ -426,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EBCAD8724D1B4CD00F83F2E /* Build configuration list for PBXNativeTarget "Spot the WASTE" */ = {
+		1EBCAD8724D1B4CD00F83F2E /* Build configuration list for PBXNativeTarget "ScanBin - The Waste Scanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EBCAD8824D1B4CD00F83F2E /* Debug */,
